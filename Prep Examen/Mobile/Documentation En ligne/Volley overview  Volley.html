@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Volley overview | Volley</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Volley overview" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://google.github.io/volley/" />
+<meta property="og:url" content="https://google.github.io/volley/" />
+<meta property="og:site_name" content="Volley" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Volley overview" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","headline":"Volley overview","name":"Volley","url":"https://google.github.io/volley/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/volley/assets/css/style.css?v=67f7639b182b07deca07771bf98cf66b216baa12">
+</head>
+<body>
+<div class="sidebar">
+    <div class="header">
+        <h1><a href="/volley/">Volley</a></h1>
+    </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="expander">
+        <span class="arrow"></span>
+    </label>
+    <nav>
+        <ul>
+            
+            <a href="/volley/">
+                <li class="active">
+                    Overview
+                </li>
+            </a>
+            
+            <a href="/volley/simple.html">
+                <li class="">
+                    Send a simple request
+                </li>
+            </a>
+            
+            <a href="/volley/requestqueue.html">
+                <li class="">
+                    Set up a RequestQueue
+                </li>
+            </a>
+            
+            <a href="/volley/request.html">
+                <li class="">
+                    Make a standard request
+                </li>
+            </a>
+            
+            <a href="/volley/request-custom.html">
+                <li class="">
+                    Implement a custom request
+                </li>
+            </a>
+            
+        </ul>
+    </nav>
+</div>
+<div class="main markdown-body">
+    <div class="main-inner">
+        <h1 id="volley-overview">Volley overview</h1>
+
+<p>Volley is an HTTP library that makes networking for Android apps easier and most importantly,
+faster. Volley is available on <a href="https://github.com/google/volley">GitHub</a>.</p>
+
+<p>Volley offers the following benefits:</p>
+
+<ul>
+  <li>Automatic scheduling of network requests.</li>
+  <li>Multiple concurrent network connections.</li>
+  <li>Transparent disk and memory response caching with standard HTTP 
+<a href="https://en.wikipedia.org/wiki/Cache_coherence">cache coherence</a>.</li>
+  <li>Support for request prioritization.</li>
+  <li>Cancellation request API. You can cancel a single request, or you can set blocks or scopes of 
+requests to cancel.</li>
+  <li>Ease of customization, for example, for retry and backoff.</li>
+  <li>Strong ordering that makes it easy to correctly populate your UI with data fetched asynchronously 
+from the network.</li>
+  <li>Debugging and tracing tools.</li>
+</ul>
+
+<p>Volley excels at RPC-type operations used to populate a UI, such as fetching a page of
+search results as structured data. It integrates easily with any protocol and comes out of
+the box with support for raw strings, images, and JSON. By providing built-in support for
+the features you need, Volley frees you from writing boilerplate code and allows you to
+concentrate on the logic that is specific to your app.
+Volley is not suitable for large download or streaming operations, since Volley holds
+all responses in memory during parsing. For large download operations, consider using an
+alternative like
+<a href="https://developer.android.com/reference/android/app/DownloadManager"><code class="language-plaintext highlighter-rouge">DownloadManager</code></a>.</p>
+
+<p>The core Volley library is developed on <a href="https://github.com/google/volley">GitHub</a> and
+contains the main request dispatch pipeline as well as a set of commonly applicable utilities,
+available in the Volley “toolbox.” The easiest way to add Volley to your project is to add the
+following dependency to your app’s build.gradle file:</p>
+
+<p><em>Groovy</em></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">implementation</span> <span class="s1">'com.android.volley:volley:1.2.1'</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Kotlin</em></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">dependencies</span> <span class="p">{</span>
+    <span class="nf">implementation</span><span class="p">(</span><span class="s">"com.android.volley:volley:1.2.1"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>You can also clone the Volley repository and set it as a library project:</p>
+
+<ol>
+  <li>
+    <p>Git clone the repository by typing the following at the command line:</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> git clone https://github.com/google/volley
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Import the downloaded source into your app project as an Android library module as described
+in <a href="https://developer.android.com/studio/projects/android-library">Create an Android Library</a>.</p>
+  </li>
+</ol>
+
+<h2 id="lessons">Lessons</h2>
+
+<p><a href="/volley/simple.html"><strong>Send a simple request</strong></a></p>
+
+<p>Learn how to send a simple request using the default behaviors of Volley, and how
+to cancel a request.</p>
+
+<p><a href="/volley/requestqueue.html"><strong>Set up RequestQueue</strong></a></p>
+
+<p>Learn how to set up a <code class="language-plaintext highlighter-rouge">RequestQueue</code>, and how to implement a singleton
+pattern to create a <code class="language-plaintext highlighter-rouge">RequestQueue</code> that lasts the lifetime of your app.</p>
+
+<p><a href="/volley/request.html"><strong>Make a standard request</strong></a></p>
+
+<p>Learn how to send a request using one of Volley’s out-of-the-box request types
+(raw strings, images, and JSON).</p>
+
+<p><a href="/volley/request-custom.html"><strong>Implement a custom request</strong></a></p>
+
+<p>Learn how to implement a custom request.</p>
+
+    </div>
+    <div class="footer">
+        Volley &middot;
+        <a href="https://github.com/google/volley">GitHub Repository</a> &middot;
+        <a href="https://github.com/google/volley/blob/master/LICENSE">License</a>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script>anchors.add('.main h2, .main h3, .main h4, .main h5, .main h6');</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<div style="padding: 20px">
+  <h1>Animation Angular</h1>
+  <button mat-raised-button color="accent" (click)="animateSquares(false)">Animer une fois</button>
+  <button mat-raised-button color="accent" (click)="animateSquares(true)">Animer en boucle</button>
+  <div class="square red-square" *ngIf="showRedSquare" [@shakeAnimation]></div>
+  <div class="square green-square" *ngIf="showGreenSquare" [@bounceAnimation]></div>
+  <div class="square blue-square" *ngIf="showBlueSquare" [@tadaAnimation]></div>
+</div>
+<div style="padding: 20px">
+  <h1>Animation CSS</h1>
+  <button mat-raised-button color="accent" (click)="rotateSquare()">Faire tourner</button>
+  <div class="square orange-square"></div>
+</div>

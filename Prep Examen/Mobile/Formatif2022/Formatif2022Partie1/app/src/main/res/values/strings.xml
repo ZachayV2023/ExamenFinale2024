@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Formatif2022Partie1</string>
+    <string name="translations">Translations</string>
+    <string name="rock">Rock</string>
+    <string name="paper">Paper</string>
+    <string name="scissors">Scissors</string>
+    <string name="pink">Pink</string>
+</resources>
